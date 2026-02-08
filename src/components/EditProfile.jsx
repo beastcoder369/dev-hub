@@ -53,7 +53,7 @@ const EditProfile = () => {
 
   return (
     <div className="flex flex-col lg:flex-row justify-center items-start gap-10 p-10">
-      <div className="card card-side bg-base-100 shadow-lg w-full lg:w-[520px]">
+      <div className="card card-side bg-base-100 shadow-lg w-full max-w-lg]">
         <figure>
           <img
             src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
