@@ -7,6 +7,7 @@ import appStore from "./utils/appStore";
 import Body from "./components/Body.jsx";
 import Login from "./components/Login.jsx";
 import Feed from "./components/Feed.jsx";
+import Signup from "./components/Signup.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Body />}>
             <Route path="login" element={<Login />} />
             <Route path="feed" element={<Feed />} />
+            <Route path="signup" element={<Signup />}/>
           </Route>
         </Routes>
       </BrowserRouter>
