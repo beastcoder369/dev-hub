@@ -12,5 +12,5 @@ const Body = () => {
   );
 };
 
-// ❌ export default Navbar;
+
 export default Body;
