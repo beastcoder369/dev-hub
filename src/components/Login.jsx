@@ -29,9 +29,12 @@ const Login = () => {
     navigate("/feed");
   } catch (error) {
     seterror(error?.response?.data || " something went wrong");
-    // console.error(error);
+   
   }
 };
+const handleSignup = () => {
+    navigate("/signup");
+  };
 
 
   return (
@@ -65,6 +68,7 @@ const Login = () => {
             <button className="btn btn-primary" onClick={handlelogin}>
               Login
             </button>
+            <button className="btn btn-active btn-secondary" onClick={ handleSignup}>first signup</button>
           </div>
         </div>
       </div>

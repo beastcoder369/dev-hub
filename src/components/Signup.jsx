@@ -21,7 +21,6 @@ const Signup = () => {
             emailId:email,
             password:password
         },{withCredentials:true})
-        //  console.log(signupdata.data);
         nagivate("/login");
         dispatch(addUser(signupdata.data))
         }catch(error){
@@ -123,6 +122,7 @@ const Signup = () => {
             <button className="btn btn-primary w-full md:w-auto" onClick={signuphandel}>
               Sign-Up
             </button>
+            <button className="btn btn-active btn-secondary" onClick={()=>nagivate("/login")}>alredy signup</button>
           </div>
         </div>
       </div>
