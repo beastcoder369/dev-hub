@@ -8,6 +8,7 @@ import Body from "./components/Body.jsx";
 import Login from "./components/Login.jsx";
 import Feed from "./components/Feed.jsx";
 import Signup from "./components/Signup.jsx";
+import Profile from "./components/Profile.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="feed" element={<Feed />} />
             <Route path="signup" element={<Signup />}/>
+            <Route path="profile" element={<Profile />} />
           </Route>
         </Routes>
       </BrowserRouter>

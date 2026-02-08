@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { BASE_URL } from "../utils/constents";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Signup = () => {
     const [fristname , setfristname] = useState("")
@@ -9,6 +11,7 @@ const Signup = () => {
     const [email , setemail] = useState("")
     const [password , setpassword] = useState("")
     const nagivate = useNavigate();
+    const dispatch = useDispatch();
 
     const signuphandel = async ()=>{
         try{
@@ -20,6 +23,7 @@ const Signup = () => {
         },{withCredentials:true})
         //  console.log(signupdata.data);
         nagivate("/login");
+        dispatch(addUser(signupdata.data))
         }catch(error){
             console.error("details are not fetched ")
         }
