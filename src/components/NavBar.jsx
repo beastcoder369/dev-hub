@@ -9,13 +9,17 @@ const NavBar = () => {
   const dispatch = useDispatch();
   const nagivate = useNavigate();
 
-  const logouthandel = async()=>{
-    try{
-      const logoutuser = await axios.post(BASE_URL + "/logout",{withCredentials:true});
+  const logouthandel = async () => {
+    try {
+      await axios.post(
+        BASE_URL + "/logout",
+        {},
+        { withCredentials: true }
+      );
+
       dispatch(removeUser());
       nagivate("/login");
-
-    }catch(error){
+    } catch (error) {
       console.error(error);
     }
   };
@@ -24,7 +28,7 @@ const NavBar = () => {
     <div>
       <div className="navbar bg-base-100 shadow-sm">
         <div className="flex-1">
-          <Link to={"/"} className="btn btn-ghost text-xl">daisyUI</Link>
+          <Link to="/" className="btn btn-ghost text-xl">daisyUI</Link>
         </div>
 
         <div className="flex gap-2">
@@ -42,10 +46,7 @@ const NavBar = () => {
                 className="btn btn-ghost btn-circle avatar"
               >
                 <div className="w-10 rounded-full">
-                  <img
-                    alt="User Avatar"
-                    src={user.photoUrl}
-                  />
+                  <img alt="User Avatar" src={user.photoUrl} />
                 </div>
               </div>
 
