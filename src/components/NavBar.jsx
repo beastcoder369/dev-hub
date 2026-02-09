@@ -28,7 +28,7 @@ const NavBar = () => {
     <div>
       <div className="navbar bg-base-100 shadow-sm">
         <div className="flex-1">
-          <Link to="/" className="btn btn-ghost text-xl">daisyUI</Link>
+          <Link to="/" className="btn btn-ghost text-xl">Devloper Hub</Link>
         </div>
 
         <div className="flex gap-2">
@@ -60,7 +60,8 @@ const NavBar = () => {
                     <span className="badge">New</span>
                   </Link>
                 </li>
-                <li><a>Settings</a></li>
+                <li><Link to="/connections">Connections</Link></li>
+                <li><Link to="/request">requests</Link></li>
                 <li><a onClick={logouthandel}>Logout</a></li>
               </ul>
             </div>

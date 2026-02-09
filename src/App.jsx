@@ -9,6 +9,10 @@ import Login from "./components/Login.jsx";
 import Feed from "./components/Feed.jsx";
 import Signup from "./components/Signup.jsx";
 import Profile from "./components/Profile.jsx";
+import Connections from "./components/Connections.jsx"
+import Request from "./components/Request.jsx"
+
+
 
 function App() {
   return (
@@ -20,6 +24,8 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="feed" element={<Feed />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="connections" element={<Connections />} />
+            <Route path="request" element={<Request/>} />
           </Route>
         </Routes>
       </BrowserRouter>

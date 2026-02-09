@@ -15,7 +15,7 @@ const Body = () => {
   const fetchUser = async() =>{
     if (userData) return;
     try{
-      const res = await axios.get(BASE_URL + "/profile/view" ,
+      const res = await axios.get(BASE_URL + "/profile/view",
         {withCredentials:true})
 
         dispatch(addUser(res.data));
@@ -30,11 +30,11 @@ const Body = () => {
     }
   };
 
-  useEffect(()=>{
-    if(!userData){
+   useEffect(() => {
+    if (!userData) {
       fetchUser();
-    } 
-  },[]);
+    }
+  }, []); 
   return (
     <div>
       <NavBar />

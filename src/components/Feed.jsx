@@ -11,10 +11,13 @@ const Feed = () => {
 
   const getFeed = async () => {
     try {
-      const userFeed = await axios.get(BASE_URL + "/feed", {
-        withCredentials: true,
-      });
-      dispatch(addFeed(userFeed.data));
+      const userFeed = await axios.get(
+        BASE_URL + "/feed",
+        { withCredentials: true }
+      );
+
+    
+      dispatch(addFeed(userFeed?.data?.data));
     } catch (error) {
       console.error(error);
     }
@@ -24,12 +27,13 @@ const Feed = () => {
     getFeed();
   }, []);
 
+  if (!feed) return null;
+  if (feed.length === 0) return <h1>No users in feed</h1>;
+
   return (
-    feed && (
-      <div>
-        <Usercard user={feed[0]} />
-      </div>
-    )
+    <div>
+      <Usercard user={feed[0]} />
+    </div>
   );
 };
 
