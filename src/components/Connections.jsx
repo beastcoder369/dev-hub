@@ -73,6 +73,13 @@ const Connections = () => {
                 {about && (
                   <p className="text-sm text-gray-700 mt-1">
                     {about}
+
+
+
+
+
+
+                    
                   </p>
                 )}
               </div>
