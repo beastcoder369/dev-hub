@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addFeed } from "../utils/feedSlice";
 import { useEffect } from "react";
 import Usercard from "./UserCard";
+import EmptyFeed from "./EmptyFeed";
 
 const Feed = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const Feed = () => {
   }, []);
 
   if (!feed) return null;
-  if (feed.length === 0) return <h1>No users in feed</h1>;
+  if (feed.length === 0) return <EmptyFeed/>;
 
   return (
     <div>
